@@ -63,7 +63,7 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #005778;
+  color: rgb(26, 157, 209);
 }
 
 .nav > .nav-links > a:hover {
@@ -357,7 +357,7 @@ footer {
   height:80px;
 }
 .footerBar{
-  display: none;
+  display: flex;
   padding:5px 0;
 }
 .footer-social-icons, ul{
