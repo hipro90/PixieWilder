@@ -1,267 +1,114 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,500,700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,400,500,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lobster&display=swap);
+
+
 
 * {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-  background-color: white;
-  position: relative;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100%;
   margin: 0px;
-  font-family: 'Raleway', sans-serif;
-  background-color: white;
-}
-
-header {
-  width: 100%;
-  height: 110px;
-  position: fixed;
-  background-color: rgba(254, 201, 179, 1);
-  top: 0;
-  z-index: 2;
+  font-family: 'segoe ui';
 }
 
 .logo {
   width: 200px;
+  height: 40px;
 }
 
-nav ul li a {
-  z-index: 1;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0 10px;
-}
-
-.navBox li a:hover {
+/* .nav a:hover {
   color: rgba(252, 76, 2, 1);
-  /*background: linear-gradient(160deg, rgba( 229, 243, 244, 1) 37%, rgba(254,201,179, 1) 37%);*/
   background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #b37cb5);
   border-radius: 10px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-}
+} */
 
-nav li {
-  align-items: center;
-}
-
-li {
-  float: left;
-}
-
-.navBox a {
-  color: rgba(0, 142, 151, 1);
-  text-align: center;
-  text-decoration: none;
-}
-
-h2 {
-  padding: 20px;
-  font-size: 1.6em;
-}
-
-p {
-  margin-left: 20px;
-  color: #613e6e;
-  font-size: 1.2em;
-}
-
-nav li {
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.3em;
-  float: left;
-  justify-content: bottom;
-  white-space: nowrap;
-}
-
-.navBar {
-  list-style-type: none;
-  overflow: hidden;
-  position: fixed;
-  background-color: rgba(229, 243, 244, 1);
+.nav {
+  height: 60px;
   width: 100%;
-  height: 100px;
-  margin-top: -20px;
-  display: flex;
+  background-color: rgba(229, 243, 244, 1);
+  position: relative;
+  
 }
 
-#linkNav {
-  margin-top: 40px;
+.nav > .nav-header {
+  display: inline;
 }
 
-@media screen and (max-width: 920px) {
-  .navBox {
-    visibility: hidden;
-  }
-
-  .bg {
-    visibility: visible;
-  }
-
-  header {
-    height: 60px;
-  }
-
-  #homeImg {
-    margin-top: 60px;
-  }
-
-  .bg input+label {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    height: 20px;
-    width: 15px;
-    z-index: 5;
-  }
-
-  .bg input+label span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 50%;
-    margin-top: -1px;
-    left: 0;
-    display: block;
-    transition: 0.1s;
-    background-color: darkblue;
-  }
-
-  .bg input+label span:first-child {
-    top: 4px;
-  }
-
-  .bg input+label span:last-child {
-    top: 16px;
-  }
-
-  .bg label:hover {
-    cursor: pointer;
-  }
-
-  .bg input:checked+label span {
-    opacity: 0;
-    top: 50%;
-  }
-
-  .bg input:checked+label span:first-child {
-    opacity: 1;
-    transform: rotate(405deg);
-  }
-
-  .bg input:checked+label span:last-child {
-    opacity: 1;
-    transform: rotate(-405deg);
-  }
-
-  .bg input~nav {
-    background: rgba(229, 243, 244, 1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 3;
-    transition: 0.1s;
-    transition-delay: 0.1s;
-    overflow: hidden;
-  }
-
-  .bg input~nav>ul {
-    position: absolute;
-    margin-top: 40px;
-    left: 20%;
-    right: 20%;
-  }
-
-  .bg input~nav>ul>li {
-    opacity: 0;
-    transition: 0.1s;
-    transition-delay: 0s;
-  }
-
-  .bg input~nav>ul>li>a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: sans-serif;
-    display: block;
-    padding: 30px;
-    font-family: "Bellota Text";
-    color: #008e97;
-    padding: 0;
-    font-size: 0.7em;
-  }
-
-  .bg input:checked~nav {
-    height: 60%;
-    transition-delay: 0s;
-  }
-
-  .bg input:checked~nav>ul>li {
-    opacity: 1;
-    transition-delay: 0.1s;
-  }
-
-  .bg nav ul li a:hover {
-    color: #005778;
-  }
-
-  ul {
-    list-style-type: none;
-    white-space: nowrap;
-  }
-
-  #burger {
-    visibility: hidden;
-  }
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #005778;
+  padding: 10px 10px 10px 10px;
 }
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  z-index: 1;
+  font-size: 18px;
+
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #005778;
+}
+
+.nav > .nav-links > a:hover {
+  color: rgba(229, 243, 244, 1);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
 
 .accueil {
   background-image: url("https://i2.wp.com/editionsnomades.com/wp-content/uploads/2019/11/effcf684-c6b2-420a-9bf1-9693b72684cf.jpg?w=1500&ssl=1");
   background-size: cover;
   background-position: center;
   height: 100%;
+  justify-content: center;
+  height: 260px;
+  position: relative
+  ;
 }
 
-.centered {
-  padding-top: 9%;
-  text-align: left;
-}
-
-.accueil h1 {
+h1 {
   position: relative;
-  font-size: 6em;
+  top: 20%;
+  text-align: center;
+  font-size: 3em;
   z-index: 1;
   font-family: lobster;
   color: white;
   text-shadow: 0.1em 0.1em rgba(252, 76, 2, 1), 0.2em 0.2em rgba(0, 142, 151, 1);
 }
 
+
 #homeImg {
   top: 0;
   width: 100%;
   height: 40%;
   margin-bottom: 0;
-
   padding-bottom: 0;
 }
 
 .AboutUs {
   margin-top: 3%;
-  margin-bottom: 12%;
+  margin-bottom: 120px;
   margin-left: 3%;
   color: #b37cb5;
 }
@@ -276,15 +123,16 @@ nav li {
 }
 
 #aboutLi {
-  margin-left: 3%;
-  font-size: 1.2em;
+  font-size: 0.8em;
   padding: 10px;
 }
 
 #findyour {
   margin-left: 10%;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: bold;
+  color: #b37cb5;
+  margin-bottom: 135px;
 }
 
 footer {
@@ -441,25 +289,79 @@ footer a:hover {
   color: white;
 }
 
-@media screen and (max-width: 920px) {
-  .accueil h1 {
-    font-size: 1.8em;
+ul {
+  list-style-type: none;}
+
+
+@media (max-width:600px) {
+
+  .logo{
+    display: none;
   }
 
-  #findyour {
-    font-size: 1.6em;
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
-}
-
-@media screen and (max-width: 920px) {
-  .accueil {
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #FC4C02;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
     width: 100%;
-    height: auto;
+    background-color: #FC4C02 ;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index:1;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    justify-content: space-around;
+    width: 100%;
+   position: relative;
+    left: 40%;
+    top: 30%;
+    font-size: x-large;
+    font-weight: normal;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }
 
-@media screen and (max-width:600px) {
-  footer {
-    flex-direction: column;
-  }
+footer {
+  display: flex;
+  flex-direction: column;
+  height:80px;
+}
+.footerBar{
+  display: none;
+  padding:5px 0;
+}
+.footer-social-icons, ul{
+  display: flex;
+  padding:5px 0px;
+  padding-inline-start: 10px;
 }
