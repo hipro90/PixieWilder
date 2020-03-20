@@ -462,7 +462,7 @@ footer a:hover {
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
   .accueil h1 {
     font-size: 1.8em;
    
@@ -473,7 +473,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
   .accueil {
     display:flex;
     width: 100%;

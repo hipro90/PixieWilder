@@ -7,50 +7,67 @@
     <meta name="author" content="AnaïsAlfonsi,VeronicaPatou,CelineCottier,TristanManaut,NicolasRegnier,MamedGohabur">
     <meta name="description" content="Page d'accueil">
     <title>🦄 Home - Pixie Wilder 🦄</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <!-- <link rel='stylesheet' href='homestyleresp.css' /> -->
-    <link rel="stylesheet" href='./assets/Styles/indexstyle.css'>
-    <!--<link rel="stylesheet" href='./assets/Styles/indexstyle2.css'>-->
-
+    <link rel='stylesheet' href='/assets/Styles/indexstyle2.css' />
 </head>
 
-<body id="bodytest">
+<body onload="bodytest();">
     <header>
-        <nav>
-            <div class="nav">
-                <input type="checkbox" id="nav-check">
-                <div class="nav-header">
-                    <div class="nav-title">
-                    </div>
+        <div class="bg">
+            <div class="logo"></div>
+            <input id="burger" type="checkbox" />
+
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="background"></div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="page" style="text-decoration:none">Home</a></li>
+                    <li><a href="ourartists.html" class="page" style="text-decoration:none">Discover Artists</a></li>
+                    <li><a href="portrait.html" class="page" style="text-decoration:none">Artists Page</a></li>
+                    <li><a href="contact.html" class="page" style="text-decoration:none">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navBox">
+            <nav>
+                <div class="nav-position">
+                    <ul>
+                        <li><a href="index.html"class="page" >
+                          <img src="/assets/Pictures/logo-200x66-orange-L.png" alt="Pixie Wilder" class="logo-bg"/>
+                        </a>
+                      </li>
+                    </ul>
+                    
+                    <ul class="navBar">
+                        <li>
+                            <img src="/assets/Pictures/logo-200x66-orange-L.png" alt="Pixie Wilder" class="logo" />
+                        </li>
+                        <li id="linkNav">
+                            <a href="index.html" class="page" style="text-decoration:none">Home</a>
+                        </li>
+                        <li id="linkNav">
+                            <a href="ourartists.html" class="page" style="text-decoration:none">Discover Artists</a>
+                        </li>
+                        <li id="linkNav">
+                            <a href="portrait.html" class="page" style="text-decoration:none">Artist Page</a>
+                        </li>
+                        <li id="linkNav">
+                            <a href="contact.html" class="page" style="text-decoration:none">Contact Us</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="nav-btn">
-                    <label for="nav-check">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
-                <div class="nav-links">
-                    <a><img src="./assets/Pictures/logo-200x66-orange-L.png" alt="Pixie Wilder" class="logo"></a>
-                    <a href="index.html" style="text-decoration:none" class="page">Home</a>
-                    <a href="ourartists.html" style="text-decoration:none" class="page">Discover Artists</a>
-                    <a href="portrait.html" style="text-decoration:none" class="page">Artists Page</a>
-                    <a href="contact.html" style="text-decoration:none" class="page">Contact Us</a>
-                </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <section class="accueil">
-        <h1 class="ml5">
-            <span class="text-wrapper">
-                <span class="line line1"></span>
-                <span class="letters letters-left">Welcome to</span>
-                <span class="letters letters-right">Pixie World</span>
-                <span class="line line2"></span>
-            </span>
-        </h1>
+        <div class="centered">
+            <h1 class="page">Welcome to Pixie Wilders</a></h1>
+        </div>
     </section>
-
     <section class="AboutUs">
         <h2>ABOUT US</h2>
         <p>
@@ -66,8 +83,8 @@
     </section>
     <footer>
         <ul class="footerBar">
-            <li><a href="#AboutUs">About Us</a></li>
-            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="#AboutUs"class="page">About Us</a></li>
+            <li><a href="#FAQ"class="page">FAQ</a></li>
         </ul>
         <div class="footer-social-icons">
             <ul class="social-icons">
@@ -86,12 +103,7 @@
             </ul>
         </div>
     </footer>
-
     <script rel="text/javascript" src="script.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

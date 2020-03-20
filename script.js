@@ -1,91 +1,99 @@
-anime.timeline({
-        loop: true
-    })
-    .add({
-        targets: '.ml5 .line',
-        opacity: [0.5, 1],
-        scaleX: [0, 1],
-        easing: "easeInOutExpo",
-        duration: 700
-    })
+var lien = "a";
+function rand(max) {
+  return (Math.floor(Math.random() * max));
+}
 
-    .add({
-        targets: '.ml5 .line',
-        duration: 600,
-        easing: "easeOutExpo",
-        translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
-    })
+function bodytest() {
+	for (var i=0;i<document.links.length;i++) {
+		if (document.links[i].className == "page") {
+			document.links[i].onmouseover = page;
+			document.links[i].onmouseout = unpage;
+			document.links[i].aecTimer = null;
+		}
+	}
+}
 
-    .add({
-        targets: '.ml5 .ampersand',
-        opacity: [0, 1],
-        scaleY: [0.5, 1],
-        easing: "easeOutExpo",
-        duration: 600,
-        offset: '-=600'
-    })
+function page(isFF) {
+	if (isFF) {
+		lien = isFF.target;
+		isFF.target.aecTimer = setInterval('lien.style.color = "rgb("+rand(256)+","+rand(256)+","+rand(256)+")";',100);
+	}
+}
 
-    .add({
-        targets: '.ml5 .letters-left',
-        opacity: [0, 1],
-        translateX: ["0.5em", 0],
-        easing: "easeOutExpo",
-        duration: 600,
-        offset: '-=300'
-    })
+function unpage(isFF) {
+	if (isFF) { 
+		clearInterval(isFF.target.aecTimer);
+		isFF.target.aecTimer = null;
+		isFF.target.style.color = "";
+	}
+}
 
-    .add({
-        targets: '.ml5 .letters-right',
-        opacity: [0, 1],
-        translateX: ["-0.5em", 0],
-        easing: "easeOutExpo",
-        duration: 600,
-        offset: '-=600'
-    }).add({
-        targets: '.ml5',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000
-    });
-
-
-
-var overcolor = document.getElementById("bodytest");
-
-// Ce gestionnaire ne sera exécuté qu'une fois
-// lorsque le curseur se déplace sur la liste
-overcolor.addEventListener("mouseenter", function (event) {
-    // on met l'accent sur la cible de mouseenter
-    event.target.style.color = "purple";
-
-    // on réinitialise la couleur après quelques instants
-    setTimeout(function () {
-        event.target.style.color = "";
-    }, 500);
-}, false);
-
-// Ce gestionnaire sera exécuté à chaque fois que le curseur
-// se déplacera sur un autre élément de la liste
-overcolor.addEventListener("mouseover", function (event) {
-        // on met l'accent sur la cible de mouseover
-        event.target.style.color = "orange";
-
-        // on réinitialise la couleur après quelques instants
-        setTimeout(function () {
-                event.target.style.color = "";
-            },
-            500);
-    },
-    false);
-
-
-// var linkext = document.getElementsByClassName("a.page");
-
-// for (var i = 0; i < linkext.length; i++) {
-//     var linkex = linkext[i]
-//     linkex.addEventListener("click", function () {
-//         var reponse = windows.alert('Are you sure to discover this beautiful link')
-//         console.log(linkext)
+// anime.timeline({
+//         loop: true
 //     })
-// };
+//     .add({
+//         targets: '.ml5 .line',
+//         opacity: [0.5, 1],
+//         scaleX: [0, 1],
+//         easing: "easeInOutExpo",
+//         duration: 700
+//     })
+
+//     .add({
+//         targets: '.ml5 .line',
+//         duration: 600,
+//         easing: "easeOutExpo",
+//         translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+//     })
+
+//     .add({
+//         targets: '.ml5 .ampersand',
+//         opacity: [0, 1],
+//         scaleY: [0.5, 1],
+//         easing: "easeOutExpo",
+//         duration: 600,
+//         offset: '-=600'
+//     })
+
+//     .add({
+//         targets: '.ml5 .letters-left',
+//         opacity: [0, 1],
+//         translateX: ["0.5em", 0],
+//         easing: "easeOutExpo",
+//         duration: 600,
+//         offset: '-=300'
+//     })
+
+//     .add({
+//         targets: '.ml5 .letters-right',
+//         opacity: [0, 1],
+//         translateX: ["-0.5em", 0],
+//         easing: "easeOutExpo",
+//         duration: 600,
+//         offset: '-=600'
+//     }).add({
+//         targets: '.ml5',
+//         opacity: 0,
+//         duration: 1000,
+//         easing: "easeOutExpo",
+//         delay: 1000
+//     });
+
+
+
+// var overcolor = document.getElementById("bodytest");
+// overcolor.addEventListener("mouseenter", function (event) {
+//     event.target.style.color = "purple";
+//     setTimeout(function () {
+//         event.target.style.color = "";
+//     }, 500);
+// }, false);
+
+// overcolor.addEventListener("mouseover", function (event) {
+//         event.target.style.color = "orange";
+//         setTimeout(function () {
+//                 event.target.style.color = "";
+//             },
+//             500);
+//     },
+//     false);
