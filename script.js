@@ -51,11 +51,11 @@ anime.timeline({
 
 
 
-let test = document.getElementById("bodytest");
+var overcolor = document.getElementById("bodytest");
 
 // Ce gestionnaire ne sera exécuté qu'une fois
 // lorsque le curseur se déplace sur la liste
-test.addEventListener("mouseenter", function (event) {
+overcolor.addEventListener("mouseenter", function (event) {
     // on met l'accent sur la cible de mouseenter
     event.target.style.color = "purple";
 
@@ -67,7 +67,7 @@ test.addEventListener("mouseenter", function (event) {
 
 // Ce gestionnaire sera exécuté à chaque fois que le curseur
 // se déplacera sur un autre élément de la liste
-test.addEventListener("mouseover", function (event) {
+overcolor.addEventListener("mouseover", function (event) {
         // on met l'accent sur la cible de mouseover
         event.target.style.color = "orange";
 
@@ -78,3 +78,14 @@ test.addEventListener("mouseover", function (event) {
             500);
     },
     false);
+
+
+// var linkext = document.getElementsByClassName("a.page");
+
+// for (var i = 0; i < linkext.length; i++) {
+//     var linkex = linkext[i]
+//     linkex.addEventListener("click", function () {
+//         var reponse = windows.alert('Are you sure to discover this beautiful link')
+//         console.log(linkext)
+//     })
+// };
