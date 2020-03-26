@@ -1,10 +1,11 @@
 var lien = "a";
+
 function rand(max) {
-  return (Math.floor(Math.random() * max));
+	return (Math.floor(Math.random() * max));
 }
 
 function bodytest() {
-	for (var i=0;i<document.links.length;i++) {
+	for (var i = 0; i < document.links.length; i++) {
 		if (document.links[i].className == "page") {
 			document.links[i].onmouseover = page;
 			document.links[i].onmouseout = unpage;
@@ -16,17 +17,63 @@ function bodytest() {
 function page(isFF) {
 	if (isFF) {
 		lien = isFF.target;
-		isFF.target.aecTimer = setInterval('lien.style.color = "rgb("+rand(256)+","+rand(256)+","+rand(256)+")";',100);
+		isFF.target.aecTimer = setInterval('lien.style.color = "rgb("+rand(256)+","+rand(256)+","+rand(256)+")";', 100);
 	}
 }
 
 function unpage(isFF) {
-	if (isFF) { 
+	if (isFF) {
 		clearInterval(isFF.target.aecTimer);
 		isFF.target.aecTimer = null;
 		isFF.target.style.color = "";
 	}
 }
+////////////////////////////////FORM EVENT//////////////////////////////////////////////
+var list = document.getElementById('list');
+list.addEventListener('change', function () {
+	// On affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
+	alert(list.options[list.selectedIndex].innerHTML);
+});
+
+var list = document.getElementById('list2');
+list.addEventListener('change', function () {
+	// On affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
+	alert(list.options[list.selectedIndex].innerHTML);
+});
+
+var form = document.getElementsByClassName('button');
+form.addEventListener('submit', function (e) {
+	alert('Vous avez envoyé le formulaire !\n\nMais celui-ci a été bloqué pour que vous ne changiez pas de page.');
+});
+
+
+
+//////////////////////////////////////////BOUTON///////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////FORM IN PROGRESS///////////////////////////////////////////////////
+
+// var myForm = document.getElementById('Form');
+
+// myForm.addEventListener('submit', function(e) {
+// 	alert('Vous avez envoyé le formulaire !\n\nMais celui-ci a été bloqué pour que vous ne changiez pas de page.');
+// 	e.preventDefault();
+// });
+
+// myForm.addEventListener('reset', function(e) {
+// 	alert('Vous avez réinitialisé le formulaire !');
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////ANIME TITLE NOT FULL JS///////////////////////////////////////////////////
 
 // anime.timeline({
 //         loop: true
@@ -79,7 +126,10 @@ function unpage(isFF) {
 //         delay: 1000
 //     });
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////////COLOR EFFET ALL ELEMENT//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // var overcolor = document.getElementById("bodytest");
 // overcolor.addEventListener("mouseenter", function (event) {
